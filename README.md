@@ -39,17 +39,23 @@ Error Handling: Centralized middleware
 
 ### Authentication
 
+```
 POST /api/v1/auth/login – Log in user and receive JWT token in HTTP-only cookie
 
 POST /api/v1/auth/register – Register a new user
+```
 
 ### Users
 
+```
 GET /api/v1/users/get-my-data – Get logged-in user’s profile (requires JWT)
 
 PATCH /api/v1/users/update-profile – Update user profile (requires JWT)
+```
 
 ### Meals
+
+```
 
 GET /api/v1/meals/ – Get all meals
 
@@ -62,9 +68,11 @@ POST /api/v1/meals/create-meal – Create a new meal (admin only, requires JWT)
 PATCH /api/v1/meals/update-meal/:id – Update meal (admin only, requires JWT)
 
 DELETE /api/v1/meals/:id – Delete meal (admin only, requires JWT)
+```
 
 ### Meal Preferences
 
+```
 GET /api/v1/meal-preferences/ – Get all meal preferences (requires JWT)
 
 GET /api/v1/meal-preferences/:id – Get single meal preference (requires JWT)
@@ -74,9 +82,11 @@ POST /api/v1/meal-preferences/create-meal-preference – Create a meal preferenc
 PATCH /api/v1/meal-preferences/update-meal-preference/:id – Update a meal preference (user only, requires JWT)
 
 DELETE /api/v1/meal-preferences/:id – Delete meal preference (user only, requires JWT)
+```
 
 ### Dietary Preferences
 
+```
 GET /api/v1/preferences/ – Get all dietary preferences (admin only, requires JWT)
 
 GET /api/v1/preferences/my-dietary-preferences – Get logged-in user’s dietary preferences (requires JWT)
@@ -85,7 +95,11 @@ POST /api/v1/preferences/create-dietary-preference – Create dietary preference
 
 PATCH /api/v1/preferences/update-dietary-preference – Update dietary preference (user only, requires JWT)
 
+```
+
 ### Orders
+
+```
 
 POST /api/v1/orders/create-order – Place a new meal order (user only, requires JWT)
 
@@ -98,6 +112,7 @@ GET /api/v1/orders/ – Get all orders (admin only, requires JWT)
 GET /api/v1/orders/my-orders – Get logged-in user’s orders (requires JWT)
 
 DELETE /api/v1/orders/:orderId – Cancel an order (user only, requires JWT)
+```
 
 ## 🧱 Middlewares
 
